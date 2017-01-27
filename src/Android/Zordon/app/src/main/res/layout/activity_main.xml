@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="powerrangers.zordon.MainActivity">
+
+
+    <ImageButton
+        android:background="@mipmap/microphone"
+        android:id="@+id/PraatButton"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gesproken Zin"
+        android:id="@+id/GesprokenZin"
+        android:layout_below="@+id/SendMessage"
+        android:layout_marginTop="41dp"
+        android:layout_alignLeft="@+id/PraatButton"
+        android:layout_alignStart="@+id/PraatButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest message: "
+        android:id="@+id/SubMessage"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/GesprokenZin"
+        android:layout_alignRight="@+id/PraatButton"
+        android:layout_alignEnd="@+id/PraatButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: "
+        android:id="@+id/StatusLabel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/pixelbulbart"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kamertemperatuur: "
+        android:id="@+id/KamerTemp"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/PraatButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:id="@+id/weight"
+        android:layout_alignBaseline="@+id/KamerTemp"
+        android:layout_alignBottom="@+id/KamerTemp"
+        android:layout_toRightOf="@+id/GesprokenZin"
+        android:layout_toEndOf="@+id/GesprokenZin" />
+
+    <Button
+        android:text="Known devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Devices"
+        android:onClick="Devices"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/btnCalibrate"
+        android:layout_alignStart="@+id/btnCalibrate" />
+
+    <Button
+        android:text="Calibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCalibrate"
+        android:onClick="calibrateScale"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
